@@ -19,7 +19,7 @@ export class AuthService {
 
  getTodos(){
 
- 	return this.http.get("http://localhost:3000/api/todos")
+ 	return this.http.get("/api/todos")
  	           .map(res=>res.json());
  	
  }
