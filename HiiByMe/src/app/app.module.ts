@@ -38,7 +38,6 @@ import { TodosComponent } from './todos/todos.component';
 import { TodoComponent } from './todo/todo.component';
 import { MyTodoComponent } from './my-todo/my-todo.component';
 import { MyBlogComponent } from './my-blog/my-blog.component';
-import { ProviderComponent } from './provider/provider.component';
 import { NoAccessComponent } from './no-access/no-access.component';
 import { ErrorComponent } from './error/error.component';
 
@@ -141,7 +140,6 @@ const AppRoutes:Routes=[
     TodoComponent,
     MyTodoComponent,
     MyBlogComponent,
-    ProviderComponent,
     NoAccessComponent,
     ErrorComponent,
     
