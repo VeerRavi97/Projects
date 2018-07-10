@@ -21,12 +21,12 @@ mongoose.connect('mongodb://localhost/blog_post')
 .catch(err=>console.log('Could Not connect to MongoDB',err));
  
 const path=require('path');
-const PublicPath=path.join(__dirname,"dist/MyApp");
+
 
 
 
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static(__dirname+'dist/MyApp'));
+app.use(express.static(__dirname+'/dist/MyApp'));
 app.use(methodOverride("_method"));
 app.use(bodyParser.json());
 
@@ -93,7 +93,7 @@ app.use(todoRoutes);
 
 
 
-app.get("*/",(req,res)=>res.sendFile(__dirname+'/dist/MyApp/index.html'));
+app.get("*",(req,res)=>res.sendFile(__dirname+'/dist/MyApp/index.html'));
 
 
 
