@@ -33,7 +33,7 @@ isLoaded:boolean=false;
   constructor(private service :BlogService,
     private spinner: NgxSpinnerService,
     private share: DataService,
-     private auth: AuthService
+     public auth: AuthService
     
 
     ) {}
