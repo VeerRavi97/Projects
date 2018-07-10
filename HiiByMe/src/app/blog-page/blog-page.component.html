@@ -1,0 +1,163 @@
+<ngx-spinner
+bdColor="rgba(51,51,51,0.3)"
+size="medium"
+color="#fff"
+loadingText="Loading..."
+type="ball-scale-multiple">
+</ngx-spinner>
+<div style="margin-top: 100px;"></div>
+<!-- <button 
+(click)="onchanged()">change event</button>
+ -->
+<ng-container *ngIf="isLoaded">
+
+  
+
+<div class="container">
+  <div class="row">
+    
+<div class="col-md-10 mx-auto">
+  
+  
+  
+  <img class="img-fluid r" src="assets/uploads/{{blog.file}}" alt="Blog Image">
+  <hr>
+  
+  <h3 class="mt-4">{{blog.title}}
+  </h3>
+  
+  <div class="row">
+    <div class="col-md-4">
+      <span class="byon">by</span>
+      {{blog.author.username}} <span class="byon">on</span> {{blog.created2 }}
+    </div>
+
+    <div class="col-md-4 ml-auto" *ngIf="isOwned">
+      
+      <div class="dropdown d-inline-block ">
+      
+        <a class="dropdown-toggle btn" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manage</a>
+       
+        <div class="dropdown-menu dropdown-primary">
+          <a class="dropdown-item"  (click)="doedit()" > <i class="far fa-edit mr-3"> </i>Edit</a>
+          <a class="dropdown-item"  (click)="remove(blog)"> <i class="far fa-trash-alt mr-3"></i>delete</a>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <p *ngIf="!isedited;else editpost">{{blog.description}}</p>
+  <ng-template #editpost>
+ <div class="form-group shadow-textarea" >
+
+   <textarea type="text" #e=ngModel
+                  class="form-control z-depth-1 rounded-0" id="exampleFormControlTextarea6"
+                  rows="5"
+                  
+
+                  [(value)]="blog.description"
+                   name="mytext" required ngModel
+                  (keyup.enter)="edit(e.value,blog)">
+                  
+  </textarea>
+    
+  </div>
+  
+  </ng-template>
+  
+  <hr>
+
+
+
+
+ <div class="icons">
+  <span class="m-3 p-3" style="cursor: pointer;" (click)=onLiked(blog) *ngIf="!isLiked;else alreadyliked">
+    
+     <i class="far fa-heart"></i> Like
+  </span>
+
+  <ng-template #alreadyliked>
+   <span class="m-3 p-3"> You Loved it</span>
+  </ng-template>
+  <span class="m-3 p-3"  style="cursor: pointer;">
+
+
+     <a  [ngx-scroll-to]="'#commentdest'" ><i class="far fa-comment-alt"> </i> comment</a>
+    
+    
+  </span>
+  
+  
+  
+  
+<hr>
+
+
+<div>
+  
+<p> <span class="m-3">{{blog.views}}  Views </span> {{blog.nolikes}} Likes</p>
+
+</div>
+
+
+   
+
+
+    
+  
+
+<div class="card">
+  <div class="card-header">
+    Comments
+  </div>
+  <div class="card-body">
+
+     <ng-container *ngFor="let c of blog.comments;let i=index">
+
+
+      <p class="p-2 " style="background-color:#f7f7f7"> <span class="p-3" style="color:tomato">{{c.author.username}}</span> <span>{{c.text}} </span></p>
+  
+  </ng-container>
+   
+  </div>
+</div>
+
+
+   
+   <div id="commentdest" class="mt-5">
+     
+   <input class="form-control" type="text" placeholder="Write a comment...." name="comment" #e
+    (keyup.enter)="onComment(e,blog)">
+
+
+
+   </div>
+
+
+   
+
+
+ </div>
+
+  
+  
+</div>
+
+
+
+  </div>
+
+
+ 
+</div>
+</ng-container>
+
+
+
+
+
+
+
+<div style="margin-top: 300px;"></div>

@@ -1,0 +1,51 @@
+<section id="b">
+  <div class="card centered"  style="width: 18rem">
+    <div class="card-header">
+      SignUp
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)= "UserRegister()" #f="ngForm">
+        <div class="form-group">
+
+
+             <div *ngIf="iserror" class="alert alert-danger">{{errormessage}}</div>
+              <div *ngIf="issuccess" class="alert alert-success">{{successmessage}}</div>
+          
+          <input  class="form-control"
+          id="username2"
+          type="text"
+          placeholder="username"
+          ngModel
+          name="username"
+          required
+          #u=ngModel>
+          <p class="myalert" *ngIf="!u.valid &&u.touched"> Username is Required</p>
+        </div>
+        
+        <div class="form-group">
+          
+          <input  class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email"
+          ngModel name="email"  required #e=ngModel>
+          <p class="myalert" *ngIf="!e.valid &&e.touched">Email is Required</p>
+        </div>
+        <div class="form-group">
+          
+          <input ngModel name="password" required #p=ngModel class="form-control" id="Password2" type="password" placeholder="Password" >
+          <p class="myalert" *ngIf="!p.valid && p.touched"> Password is Required</p>
+        </div>
+        <div>
+          <span class="small"> already have a account </span>
+          <div class="ml-5 pl-2 d-inline">
+            or
+            <a class="small btn1" routerLink="/register" >Login</a>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block"
+        [disabled]="!f.valid">SignUp</button>
+      </form>
+      <div >
+        
+      </div>
+    </div>
+  </div>
+</section>

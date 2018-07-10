@@ -1,0 +1,70 @@
+
+:host{
+background-color:  #f2f2f2;
+}
+p{
+
+	color: #542525;
+}
+
+
+.card{
+	
+	border-radius: 0;
+}
+
+.card-img-top{
+	min-height: 280px;
+	max-height: 290px;
+}
+
+hr{
+border-bottom-width: 2px;
+}
+
+
+h5{
+	
+	
+	
+	padding:5px;
+	color: black !important;
+	text-transform: uppercase;
+}
+
+h5 a{
+
+	font-family: 'Montserrat',sans-serif;
+   font-size: 23px;
+	color: black;
+	font-weight: 400;
+}
+
+
+.post-details{
+	font-size: 14px;
+	
+
+}
+
+
+.col-md-7{
+
+	background-color: #f7f7f7;
+	
+}
+p{
+
+	color: #542525;
+}
+
+.btn{
+	background-color: #202020; ;
+	color: #fff;
+	transition: opacity 1s ease-in-out;
+	    font-family: 'Montserrat', sans-serif;
+	    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
