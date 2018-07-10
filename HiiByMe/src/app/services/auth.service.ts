@@ -61,7 +61,7 @@ logout(){
 
 isLoggedIn(){
 
-	let jwtHelper=new JwtHelper();
+	let jwtHelper=new JwtHelperService();
 	let token=localStorage.getItem("token");
 
 	if(!token)
@@ -82,7 +82,7 @@ isLoggedIn(){
 	let token=localStorage.getItem("token");
 	if(!token) return null;
 	
-	return new JwtHelper().decodeToken(token).username;
+	return new JwtHelperService().decodeToken(token).username;
 
 }
 
@@ -93,7 +93,7 @@ get isAdmin(){
 	let token=localStorage.getItem("token");
 	if(!token) return null;
 	
-	return new JwtHelper().decodeToken(token).isAdmin;
+	return new JwtHelperService().decodeToken(token).isAdmin;
 
 }
 
