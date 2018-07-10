@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
  status: boolean = false;
  
 
-  constructor( auth :AuthService) {
+  constructor(  public auth :AuthService) {
   	
   	console.log("username is",this.username);
   }
