@@ -26,7 +26,7 @@ const PublicPath=path.join(__dirname,"dist/MyApp");
 
 
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static(PublicPath));
+app.use(express.static(__dirname+'dist/MyApp'));
 app.use(methodOverride("_method"));
 app.use(bodyParser.json());
 
