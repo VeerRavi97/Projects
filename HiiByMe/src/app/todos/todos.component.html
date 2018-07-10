@@ -62,7 +62,7 @@
   
  
     <input type="text" class="text-center" id="todoInput" placeholder="Insert your task here..." 
-      ngModel name="newtodo"  required #e=ngModel  (keyup.enter)="createtodo(e)">
+      ngModel name="newtodo"  required #e=ngModel>
          
         <div class="alert alert-danger" *ngIf="!isLogged && e.touched">Need to login first</div>
    
