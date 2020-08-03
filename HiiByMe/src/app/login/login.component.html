@@ -1,0 +1,44 @@
+<section id="a">
+  <div class="card centered"  style="width: 18rem">
+    <div class="card-header">
+      LogIn
+    </div>
+
+   
+
+
+    <div class="card-body">
+      <form (ngSubmit)="UserSignin()" #f="ngForm">
+
+
+        <div *ngIf="invalidlogin" class="alert alert-danger">Invalid Username and/or password</div>
+        
+        <div class="form-group">
+          
+          <input ngModel name="username" class="form-control" id="username" type="text" placeholder="username"
+          #u=ngModel required>
+          <!-- <div class="alert alert-danger" *ngIf="!u.valid &&u.touched"> Username is Required</div>
+          <div class="alert alert-danger" *ngIf="Isloggedin"> Username is Required</div> -->
+        </div>
+        <div class="form-group">
+          
+          <input ngModel name="password" required #p=ngModel class="form-control" id="Password2" type="password" placeholder="Password" >
+         <!--  <div class="alert alert-danger" *ngIf="!p.valid && p.touched"> Password is Required</div> -->
+        </div>
+        <div>
+          <a class="small" href="forgot-password.html">Forgot Password?</a>
+          <div class="ml-5 pl-2 d-inline">
+            or
+            <a class="small btn2" routerLink="/register">Sign Up</a>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+      </form>
+      <div >
+        <p class="myalert" *ngIf="loginfirst">Please Login First</p>
+        
+        
+      </div>
+    </div>
+  </div>
+</section>

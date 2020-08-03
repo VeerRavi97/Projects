@@ -1,0 +1,167 @@
+.navbar{
+  background-color:  white;
+  
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16);
+  font-weight: normal;
+   
+}
+.navbar-brand{
+
+font-family: "pregular",sans-serif;
+font-size: 1.5rem;
+letter-spacing: 1px;
+color: black;
+padding-left:18px;
+margin-right: 2px;
+
+
+}
+
+
+
+.navbar-menu{
+
+}
+.navbar-brand:hover{
+
+
+color: black;
+
+opacity: .8;
+
+}
+
+.nav-link{
+ color: black;
+ padding: 5px;
+ margin:0 8px;
+ font-weight: normal;
+ font-size: 12px;
+ font-family: "Raleway",sans-serif;
+
+letter-spacing: 1px;
+}
+.nav-link:hover{
+ 
+
+  
+   transition: all .1s ease-in;
+   box-shadow: 0 2px 5px 0 rgba(0,0,0,.16);
+ 
+  
+
+}
+
+
+
+.heart{
+  color: #e71c37;
+
+padding: 0;
+    
+}
+
+.active{
+
+	
+	 
+	  transition: all 1s ease-out;
+	   box-shadow: 0 2px 5px 0 rgba(0,0,0,.33);
+  
+	
+}
+
+
+
+
+
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+html{
+	height:100%;
+}
+
+body{
+	height:100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.menu-toggle{
+	flex:0 0 auto;
+	width:40px;
+	height:40px;
+	/*border:1px solid rgb(15,15,15);*/
+	cursor:pointer;
+	position:relative;
+}
+.hamburger{
+	position:absolute;
+	top:45%;
+	left:35%;
+	transform:translate(-50%,-50%);
+}
+.hamburger span{
+	display:block;
+	width:30px;
+	height:2px;
+	margin-bottom:3px;
+	overflow:hidden;
+	position:relative;
+}
+.hamburger span:last-child{
+	margin:0;
+}
+.hamburger span:before,.hamburger span:after{
+	content:"";
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-color:rgb(15,15,15);
+	transform:translateX(-200%);
+	transition:transform ease 300ms;
+}
+.hamburger span:after{
+	transform:translateX(0);
+}
+.hamburger span:nth-child(2):before,.hamburger span:nth-child(2):after{
+	transition-delay:75ms;
+}
+.hamburger span:last-child:before,.hamburger span:last-child:after{
+	transition-delay:150ms;
+}
+.menu-toggle:hover .hamburger span:before{
+	transform:translateX(0);
+}
+.menu-toggle:hover .hamburger span:after{
+	transform:translateX(200%);
+}
+.menu-toggle.active .hamburger span:before{
+	transform:translateX(100%);
+}
+.menu-toggle.active .hamburger span:after{
+	transform:translateX(200%);
+}
+
+
+
+
+.dropdown-menu a {
+    
+ font-size: 11px;
+    font-family: "Raleway", sans-serif;
+   box-shadow: 0 2px 5px 0 rgba(0,0,0,.10);
+   
+}
+.dropdown-menu {
+    min-width: 30px !important ;
+    margin-right: 8px;
+    padding:5px;
+  
+}

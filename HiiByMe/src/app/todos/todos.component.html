@@ -1,0 +1,94 @@
+ 
+
+   
+
+  <header>
+
+    <div class="container centered">
+      
+
+      <h1 >todo<span>list</span></h1>
+    <h5>Hey,You need to Keep these in Your Mind</h5>
+      <div class="time">
+  <span class="hms"></span>
+  <span class="ampm"></span>
+  <br>
+  <span class="date"></span>
+</div> 
+    </div>
+
+    
+  </header>
+  
+
+  <!-- <div class="container">
+   
+ <div class="row">
+   
+<div class="col-md-6 ">
+  
+<div class="btn btn1">
+  <a  class="text-white " href="/todos/register">Register</a>
+
+</div>
+
+
+</div>
+<div class="col-md-6 ">
+  
+<div class="btn btn2">
+  <a  href="/todos/login">Login</a>
+
+</div>
+
+
+</div>
+
+
+
+ </div>
+
+
+
+
+ </div>
+ -->
+  
+  <div class="container mb-4">
+
+    <div class="row">
+  <div class="col-md-6  form">
+
+  
+ 
+    <input type="text" class="text-center" id="todoInput" placeholder="Insert your task here..." 
+      ngModel name="newtodo"  required #e=ngModel>
+         
+        <div class="alert alert-danger" *ngIf="!isLogged && e.touched">Need to login first</div>
+   
+  </div>
+   </div>
+
+   <div class="row">
+    <ng-container *ngFor="let user of users">
+    <div class="col-md-4">
+
+   <li class="task" style="color: black;"> <a routerLink="/todos/{{user.username}}">{{user.username}} </a></li>
+
+  <ul class="list list-unstyled">
+  <ng-container *ngFor="let todo of user.todos;let i = index">
+    
+<li class="task" *ngIf="(i<5)" > {{todo.name.substr(0,30)}}<span class="right px-3"> {{todo.fromnow}} </span> </li>
+  
+   </ng-container>
+
+  </ul>
+     </div>
+     </ng-container>
+
+</div>
+</div>
+
+
+<div style="margin-bottom: 200px"></div>
+

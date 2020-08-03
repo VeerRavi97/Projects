@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins|Questrial');
+
+
+
+.card{
+font-family: "plight",sans-serif;
+}
+
+.centered {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+
+  a:hover{
+  	cursor: pointer;
+
+}
+
+.btn3{
+
+background-color: #7998a6;
+   
+    float:right;
+    text-align: center;
+    padding: 10px 80px;
+
+ font-family:  'Raleway';
+    font-weight: 400;
+    
+    border-radius:  0;
+    color: white;
+
+}
+.btn3:hover{
+  background-color: #34454f;
+}
+.btn3 a {
+      text-decoration: none;
+      
+}
+
+
+.btn4{
+
+background-color:#e6eaed;
+ padding: 15px 85px;
+ border: 1px solid #e1e5e8;
+
+
+}
+.btn4 a {
+      text-decoration: none;
+      color: #33383d;
+      
+}
+
+.form-control{
+	border-radius: 0;
+	border: 1px solid rgb(188,188,188);
+}
+input{
+	font-family: 'Questrial',Raleway;
+}
+
+.google{
+	float:right;
+}
+
+
+
+

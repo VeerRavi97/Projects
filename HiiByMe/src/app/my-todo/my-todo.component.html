@@ -1,0 +1,73 @@
+<header>
+  <div class="container centered">
+    
+    <h1 >todo<span>list</span></h1>
+    <h5>Hey,You need to Keep these in Your Mind</h5>
+    <h5 class="mt-3 text-center"> {{now}} </h5>
+  </div>
+  
+</header>
+
+
+<div class="container ">
+  <div class="row">
+    <div class="col-md-6  mx-auto">
+      
+      
+      <input #inputelement type="text" class="text-center" id="todoInput" placeholder="Insert your task here..."
+      ngModel name="newtodo"  required #e=ngModel
+      (keyup.enter)="createtodo(inputelement)" >
+      
+      <div class="alert alert-danger" *ngIf="popupmessage">Create Your Own Todo</div>
+      
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-8 mx-auto">
+      <ul class="list list-unstyled" >
+        <li class="task" > Example... <span class="right px-3 time"> 12:34 pm</span>  <span class="right icon"><i class="del far  fa-trash-alt"></i> <i class="px-2 refresh fas fa-sync-alt" ></i> </span>  </li>
+       
+        <ng-container *ngFor="let todo of todos;let i=index">
+        <li class="task " [ngClass]="{done:todo.completed}"
+          (click)="markedIndex=i" (click)="toggle()" @fade>
+          {{todo.name.substr(0,30)}}
+
+          
+          <span class="right px-3 time"> {{todo.fromnow}}</span>
+          <span class=" right views">{{todo.views}} views</span>
+          <span class="right icon" *ngIf="isOwned">
+          
+            <i class="del far  fa-trash-alt"  (click)="removeTodo(todo)"> 
+           
+            
+           </i>
+            <i class="mx-4 refresh fas fa-sync-alt" (click)="updateTodo(todo)"> </i>
+          </span>
+        </li>
+        
+        
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div style="margin-bottom: 200px"></div>

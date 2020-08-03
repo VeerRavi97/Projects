@@ -1,0 +1,54 @@
+.card-header {
+  background-color: #23242c;
+  color: #f7f7f7;
+  }
+
+.card-body {
+  background-color: #f7f7f7; }
+
+  img{
+  	max-height: 400px;
+  	width: 100%;
+  }
+
+
+p{
+
+ font-size: 14px;
+  font-family: "gbook",Montserrat;
+}
+
+
+p .byon{
+
+opacity: .5;
+}
+
+   .dropdown-menu a {
+    
+ font-size: 14px;
+    font-family: "Raleway", sans-serif;
+   box-shadow: 0 2px 5px 0 rgba(0,0,0,.10);
+   
+}
+.dropdown-menu {
+    min-width: 45px !important ;
+    margin-right: 8px;
+    padding:5px;
+  
+}
+
+
+.btn{
+	background-color: #202020; 
+	color: #fff !important;
+	transition: opacity 1s ease-in-out;
+	    font-family: 'Montserrat', sans-serif;
+	    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+
+
+
