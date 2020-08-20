@@ -27,7 +27,7 @@
   "@fortawesome/fontawesome-free": "^5.1.0",
   "@ng-bootstrap/ng-bootstrap": "^2.1.2",
   "@nicky-lenaers/ngx-scroll-to": "^1.0.0",
-  "bcrypt": "^2.0.1",
+  "bcrypt": "^5.0.0",
   "bcryptjs": "^2.4.3",
   "body-parser": "^1.18.3",
   "bootstrap": "^4.1.1",
