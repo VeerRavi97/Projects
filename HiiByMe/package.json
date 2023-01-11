@@ -44,7 +44,7 @@
   "gulp": "^3.9.1",
   "helmet": "^3.12.1",
   "jquery": "^3.3.1",
-  "jsonwebtoken": "^8.3.0",
+  "jsonwebtoken": "^9.0.0",
   "lodash": "^4.17.10",
   "mdbootstrap": "^4.5.5",
   "method-override": "^2.3.10",
