@@ -36,7 +36,7 @@
   "connect-flash": "^0.1.1",
   "core-js": "^2.5.4",
   "ejs": "^2.6.1",
-  "express": "^4.16.3",
+  "express": "^4.17.3",
   "express-bearer-token": "^2.1.1",
   "express-fileupload": "^0.4.0",
   "express-sanitizer": "^1.0.4",
